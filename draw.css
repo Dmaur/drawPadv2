@@ -28,6 +28,7 @@ background-color: rgba(0, 0, 255, 0.308)
 }
 
 #modBox {
+     font-size: smaller ;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -37,13 +38,15 @@ background-color: rgba(0, 0, 255, 0.308)
     margin-top: 30px;
     border-radius: 15px;
     width: 600px;
+    height: auto;
     align-self: center;
     background-color: rgba(30, 10, 207, 0.473);
 }
 
-.size{
-
-
+#size {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 
 .color {

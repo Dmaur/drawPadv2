@@ -1,11 +1,13 @@
-window.onload = function(){
-    setTimeout(makeGrid(30), 5000);
-}
+window.onload = function () {
+  setTimeout(makeGrid(16), 1000);
+};
 const drawBox = document.getElementById("drawBox");
+const size = document.getElementById("size");
+const reset = document.getElementById("reset");
 
-let changeColor = function(e){
-    e.target.style.backgroundColor = "black";
-}
+let changeColor = function (e) {
+  e.target.style.backgroundColor = "black";
+};
 // make the drawing grid
 function makeGrid(size) {
   for (let i = 0; i < size; i++) {
@@ -18,10 +20,15 @@ function makeGrid(size) {
     for (let j = 0; j <= size; j++) {
       const col = document.createElement("div");
       col.className = "col";
-      col.addEventListener("mouseover", changeColor)
+      col.addEventListener("mouseover", changeColor);
       col.style = "margin: 0px; padding: 0px; width: 100%;";
       row.appendChild(col);
     }
   }
 }
 
+// const resetBoard(){
+//   // clear board
+//   // loop through
+//   //insert cell
+// }

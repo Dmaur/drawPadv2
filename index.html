@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="draw.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="draw.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="title">Its a draw thing</h1>
     <div id="drawBox"></div>
     <div id="modBox">
-        <div id="size">size</div>
-        <div id="color">color</div>
-        <div id="eraser">eraser</div>
-        <div id="rainbow">rainbow</div>
-        <div id="reset">reset</div>
+      <div id="size">
+        <fieldset>
+          <legend>Select grid size</legend>  
+          <input
+            type="radio"
+            id="default16"
+            name="sizeSelect"
+            class="radioButton"
+            value="16"
+          /><label for="default">16x16</label><br />
+          <input
+            type="radio"
+            id="medium32"
+            name="sizeSelect"
+            class="radioButton"
+            value="32"
+          />
+          <label for="medium">32x32</label><br />
+          <input
+            type="radio"
+            id="large64"
+            name="sizeSelect"
+            class="radioButton"
+            value="64"
+          /><label for="large">64x64</label><br />
+        </fieldset>
+      </div>
+      <div id="color">color</div>
+      <div id="eraser">eraser</div>
+      <div id="rainbow">rainbow</div>
+      <button id="reset">reset</button>
     </div>
     <script src="draw.js"></script>
-</body>
+  </body>
 </html>
