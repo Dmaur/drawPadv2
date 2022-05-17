@@ -1,17 +1,64 @@
-.title {
-    text-align: center;
+body {
+display: flex;
+flex-direction: column;
+background-color: rgba(0, 0, 255, 0.308)
 }
 
+.title {
+    align-self: center;
+    width: 400px;
+    border-color:  rgba(255, 0, 0, 0.493);
+    border-style: inset;
+    border-width: 15px;
+    border-radius:15px ;
+    background-color: rgba(30, 10, 207, 0.473);
+    text-align: center;
+ }
+
 #drawBox {
-    
     border-radius: 15px;
     display: flex;
-    justify-self: center;
+    align-self: center;
     flex-direction: row;
     border-style: groove;
-    border-color:grey;
+    border-color:rgba(255, 255, 0, 0.356);
     border-width: 20px;
     height: 600px ;
     width: 600px;
+}
+
+#modBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 16px;
+    border-style: inset;
+    border-color: rgba(255, 0, 0, 0.493);
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 600px;
+    align-self: center;
+    background-color: rgba(30, 10, 207, 0.473);
+}
+
+.size{
+
+
+}
+
+.color {
+
+}
+
+.eraser {
+
+}
+
+.rainbow {
+
+}
+
+.reset {
+
 }
 

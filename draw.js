@@ -1,7 +1,13 @@
+const drawBox = document.getElementById("drawBox");
+drawBox.addEventListener(onmouseover, function(e){
+    if ( e.target.className.contains("col")){
+        col.style = "background-color: black;";
+    }
+});
+
 window.onload(makeGrid(16));
 // make the drawing grid
 function makeGrid(size) {
-  const drawBox = document.getElementById("drawBox");
   for (let i = 0; i < size; i++) {
     const row = document.createElement("div");
     row.style =
@@ -12,9 +18,14 @@ function makeGrid(size) {
     for (let j = 0; j <= size; j++) {
       const col = document.createElement("div");
       col.className = "col";
-      col.style = "margin: 0px; padding: 0px; width: 100%;";
+      col.style =
+        "margin: 0px; padding: 0px; width: 100%;";
+      //col.addEventListener(onmouseover, function(){
+        //  document.getElementsByClassName("col").style = "backgroun-color: black;"
+      //});
       //col.innerText = 0 + j;
       row.appendChild(col);
     }
   }
 }
+
