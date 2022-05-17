@@ -1,11 +1,11 @@
+window.onload = function(){
+    setTimeout(makeGrid(30), 5000);
+}
 const drawBox = document.getElementById("drawBox");
-drawBox.addEventListener(onmouseover, function(e){
-    if ( e.target.className.contains("col")){
-        col.style = "background-color: black;";
-    }
-});
 
-window.onload(makeGrid(16));
+let changeColor = function(e){
+    e.target.style.backgroundColor = "black";
+}
 // make the drawing grid
 function makeGrid(size) {
   for (let i = 0; i < size; i++) {
@@ -18,12 +18,8 @@ function makeGrid(size) {
     for (let j = 0; j <= size; j++) {
       const col = document.createElement("div");
       col.className = "col";
-      col.style =
-        "margin: 0px; padding: 0px; width: 100%;";
-      //col.addEventListener(onmouseover, function(){
-        //  document.getElementsByClassName("col").style = "backgroun-color: black;"
-      //});
-      //col.innerText = 0 + j;
+      col.addEventListener("mouseover", changeColor)
+      col.style = "margin: 0px; padding: 0px; width: 100%;";
       row.appendChild(col);
     }
   }
