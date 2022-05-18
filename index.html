@@ -20,6 +20,7 @@
             name="sizeSelect"
             class="radioButton"
             value="16"
+            checked
           /><label for="default">16x16</label><br />
           <input
             type="radio"
@@ -41,7 +42,7 @@
       <div id="color">color</div>
       <div id="eraser">eraser</div>
       <div id="rainbow">rainbow</div>
-      <button id="reset">reset</button>
+      <button id="reset" onclick="resetBoard()">reset</button>
     </div>
     <script src="draw.js"></script>
   </body>

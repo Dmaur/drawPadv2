@@ -27,8 +27,10 @@ function makeGrid(size) {
   }
 }
 
-// const resetBoard(){
-//   // clear board
-//   // loop through
-//   //insert cell
-// }
+ const resetBoard = function () {
+   // clear board
+   drawBox.textContent = "";
+   // loop through
+   makeGrid(document.querySelector("input[name='sizeSelect']:checked").value);
+   //insert cell
+ }
