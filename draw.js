@@ -4,16 +4,25 @@ window.onload = function () {
 const drawBox = document.getElementById("drawBox");
 const size = document.getElementById("size");
 const reset = document.getElementById("reset");
+const eraser = document.getElementById("eraser");
+const rainbow = document.getElementById("rainbow");
+let currentMode = "default";
 
 let changeColor = function (e) {
-  if ( document.getElementById("erase").clicked == true){
+  if (currentMode == "default") {
+    e.target.style.backgroundColor = document.querySelector(
+      "input[name='colorSelector']"
+    ).value;
+  } else if (currentMode == "erase") {
     e.target.style.backgroundColor = "white";
-  } else if (document.getElementById("colorful").clicked == true){
-    e.target.style.backgroundColor  = "pink";
-  }else {
-  e.target.style.backgroundColor = document.querySelector(
-    "input[name='colorSelector']"
-  ).value;
+  } else if (currentMode == "rainbow") {
+    const randomBetween = (min, max) =>
+      min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    const rgb = `rgb(${r},${g},${b})`;
+    e.target.style.background = rgb;
   }
 };
 // make the drawing grid
@@ -40,3 +49,14 @@ const resetBoard = function () {
   // loop through
   makeGrid(document.querySelector("input[name='sizeSelect']:checked").value);
 };
+const currentErase = function () {
+  currentMode = "erase";
+  console.log(currentMode);
+};
+const currentRainbow = function () {
+  currentMode = "rainbow";
+  console.log(currentMode);
+};
+const currentDefault = function() {
+  currentMode = "default"
+}

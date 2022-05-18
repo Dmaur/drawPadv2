@@ -4,7 +4,7 @@ body {
   background-color: rgba(30, 10, 207, 0.185);
 }
 
-.title {
+#title {
   align-self: center;
   width: 400px;
   border-color: rgba(255, 0, 0, 0.493);
@@ -39,7 +39,7 @@ body {
   margin-top: 30px;
   border-radius: 15px;
   width: 600px;
-  height: auto;
+  height: 100px;
   align-self: center;
   background-color: rgba(30, 10, 207, 0.185);
 }
@@ -57,16 +57,25 @@ body {
 }
 
 #colorSelector{
-    border-radius: 1S5px;
+  border-style: none;
     width: 70px;
     height: 75px;
 }
 
 #eraser {
-
+  height: 70px;
+    width: 70px;
+    align-self: center;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.493);
 }
 
-.rainbow {
+#rainbow {
+  height: 70px;
+    width: 70px;
+    align-self: center;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.493);
 }
 
 #reset {
@@ -74,4 +83,5 @@ body {
     width: 70px;
     align-self: center;
     border-radius: 15px;
+    background-color:rgba(30, 10, 207, 0.185)
 }

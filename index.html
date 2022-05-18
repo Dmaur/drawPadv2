@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="title">Its a draw thing</h1>
+    <h1 id="title">Its a draw thing</h1>
     <div id="drawBox"></div>
     <div id="modBox">
       <div id="size">
@@ -44,14 +44,10 @@
       </div>
       <div id="color">
         color
-        <input type="color" id="colorSelector" name="colorSelector" />
+        <input type="color" id="colorSelector" name="colorSelector" onclick="currentDefault()" />
       </div>
-      <div id="eraser">eraser
-        <button id="erase" onclick="erase()"></button>
-      </div>
-      <div id="rainbow">rainbow
-        <input type="checkbox" id="colorful"></button>
-      </div>
+      <button id="eraser" onclick="currentErase()">eraser</button>
+      <button id="rainbow" onclick="currentRainbow()">rainbow mode</button>
       <button id="reset" onclick="resetBoard()">reset</button>
     </div>
     <script src="draw.js"></script>
