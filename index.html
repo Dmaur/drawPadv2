@@ -13,13 +13,14 @@
     <div id="modBox">
       <div id="size">
         <fieldset>
-          <legend>Select grid size</legend>  
+          <legend>Select grid size</legend>
           <input
             type="radio"
             id="default16"
             name="sizeSelect"
             class="radioButton"
             value="16"
+            onclick="resetBoard()"
             checked
           /><label for="default">16x16</label><br />
           <input
@@ -28,6 +29,7 @@
             name="sizeSelect"
             class="radioButton"
             value="32"
+            onclick="resetBoard()"
           />
           <label for="medium">32x32</label><br />
           <input
@@ -36,12 +38,20 @@
             name="sizeSelect"
             class="radioButton"
             value="64"
+            onclick="resetBoard()"
           /><label for="large">64x64</label><br />
         </fieldset>
       </div>
-      <div id="color">color</div>
-      <div id="eraser">eraser</div>
-      <div id="rainbow">rainbow</div>
+      <div id="color">
+        color
+        <input type="color" id="colorSelector" name="colorSelector" />
+      </div>
+      <div id="eraser">eraser
+        <button id="erase" onclick="erase()"></button>
+      </div>
+      <div id="rainbow">rainbow
+        <input type="checkbox" id="colorful"></button>
+      </div>
       <button id="reset" onclick="resetBoard()">reset</button>
     </div>
     <script src="draw.js"></script>

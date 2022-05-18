@@ -1,67 +1,77 @@
 body {
-display: flex;
-flex-direction: column;
-background-color: rgba(0, 0, 255, 0.308)
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(30, 10, 207, 0.185);
 }
 
 .title {
-    align-self: center;
-    width: 400px;
-    border-color:  rgba(255, 0, 0, 0.493);
-    border-style: inset;
-    border-width: 15px;
-    border-radius:15px ;
-    background-color: rgba(30, 10, 207, 0.473);
-    text-align: center;
- }
+  align-self: center;
+  width: 400px;
+  border-color: rgba(255, 0, 0, 0.493);
+  border-style: ridge;
+  border-width: 15px;
+  border-radius: 15px;
+  background-color: rgba(30, 10, 207, 0.185);
+  text-align: center;
+}
 
 #drawBox {
-    border-radius: 15px;
-    display: flex;
-    align-self: center;
-    flex-direction: row;
-    border-style: groove;
-    border-color:rgba(255, 255, 0, 0.356);
-    border-width: 20px;
-    height: 600px ;
-    width: 600px;
+  border-radius: 15px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  border-style: ridge;
+  border-color: rgba(255, 0, 0, 0.493);
+  border-width: 20px;
+  height: 600px;
+  width: 600px;
+  background-color: white;
 }
 
 #modBox {
-     font-size: smaller ;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 16px;
-    border-style: inset;
-    border-color: rgba(255, 0, 0, 0.493);
-    margin-top: 30px;
-    border-radius: 15px;
-    width: 600px;
-    height: auto;
-    align-self: center;
-    background-color: rgba(30, 10, 207, 0.473);
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 16px;
+  border-style: ridge;
+  border-color: rgba(255, 0, 0, 0.493);
+  margin-top: 30px;
+  border-radius: 15px;
+  width: 600px;
+  height: auto;
+  align-self: center;
+  background-color: rgba(30, 10, 207, 0.185);
 }
 
 #size {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+#color {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
 }
 
-.color {
-
+#colorSelector{
+    border-radius: 1S5px;
+    width: 70px;
+    height: 75px;
 }
 
-.eraser {
+#eraser {
 
 }
 
 .rainbow {
-
 }
 
-.reset {
-
+#reset {
+    height: 70px;
+    width: 70px;
+    align-self: center;
+    border-radius: 15px;
 }
-
